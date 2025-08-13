@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "shift-click-decorated-pots",
+  "version": "${version}",
+  "name": "shift-click-decorated-pots",
+  "description": "A fabric mod to make it faster to put all your items in a decorated pot!",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/shift-click-decorated-pots/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "xyz.puppet57.shiftClickDecoratedPots.client.ShiftClickDecoratedPotsDataGenerator"
+    ],
+    "client": [
+      "xyz.puppet57.shiftClickDecoratedPots.client.ShiftClickDecoratedPotsClient"
+    ],
+    "main": [
+      "xyz.puppet57.shiftClickDecoratedPots.ShiftClickDecoratedPots"
+    ]
+  },
+  "mixins": [
+    "shift-click-decorated-pots.mixins.json",
+    {
+      "config": "shift-click-decorated-pots.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
